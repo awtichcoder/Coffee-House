@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@theme {
+  --color-light-coffee: #c89f94;
+}
+/* Custom top menu item styles */
+.ct-top-menu-item {
+  @apply cursor-pointer py-1 hover:text-gray-800 relative after:absolute after:bottom-0 after:left-0 after:bg-light-coffee after:h-0.5 after:w-full after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100;
+}
+.ct-icon {
+  @apply w-5 h-5 inline-block;
+}
+.ct-badge-circle {
+  @apply text-xs text-center rounded-full  px-1.5;
+}
