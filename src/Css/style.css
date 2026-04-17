@@ -1,10 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
 @theme {
   --color-light-coffee: #c89f94;
+  --font-sans: "Karla", sans-serif;
+  --animate-slideDown: slideDown 0.3s ease-in-out;
 }
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Custom top menu item styles */
+.ct-topmenu-expanded {
+  @apply absolute top-10 z-50 w-full text-center bg-white animate-slideDown;
+}
 .ct-top-menu-item {
-  @apply cursor-pointer py-1 hover:text-gray-800 relative after:absolute after:bottom-0 after:left-0 after:bg-light-coffee after:h-0.5 after:w-full after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100;
+  @apply cursor-pointer py-1 hover:text-gray-800 relative after:lg:absolute after:bottom-0 after:lg:left-0 after:lg:bg-light-coffee after:lg:h-0.5 after:lg:w-full after:lg:scale-x-0 after:lg:origin-left after:lg:transition-transform after:lg:duration-300 hover:after:lg:scale-x-100;
+}
+.ct-top-menu-item-active {
+  @apply text-gray-800;
 }
 .ct-icon {
   @apply w-5 h-5 inline-block;
