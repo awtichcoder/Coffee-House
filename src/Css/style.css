@@ -4,6 +4,7 @@
   --color-light-coffee: #c89f94;
   --font-sans: "Karla", sans-serif;
   --animate-slideDown: slideDown 0.5s ease-in-out;
+  --animate-fadeIn: fadeIn 0.5s ease-in-out;
   --background-image-ct-slider: url("/slider.jpg");
 }
 @keyframes slideDown {
@@ -14,7 +15,15 @@
     transform: translateY(0);
   }
 }
-
+@keyframes fadeIn {
+  from: {
+    opacity: 0;
+  }
+  ,
+  to: {
+    opacity: 1;
+  }
+}
 /* Custom top menu item styles */
 .ct-topmenu-expanded {
   @apply absolute top-10 z-50 w-full text-center bg-white animate-slideDown;
@@ -38,5 +47,9 @@
   @apply w-8 h-px bg-gray-200;
 }
 .ct-subheadline-deco-label {
-  @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-[15px];
+  @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-xs;
+}
+/*  thieu hover cho phan button */
+.ct-button {
+  @apply text-center uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold;
 }
