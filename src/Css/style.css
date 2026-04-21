@@ -53,3 +53,6 @@
 .ct-button {
   @apply text-center uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold;
 }
+.ct-button2 {
+  @apply uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold hover:opacity-80;
+}
