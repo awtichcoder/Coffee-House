@@ -51,7 +51,7 @@
 }
 /*  thieu hover cho phan button */
 .ct-button {
-  @apply text-center uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold;
+  @apply text-center uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold  hover:bg-white/75;
 }
 .ct-button2 {
   @apply uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold hover:opacity-80;
