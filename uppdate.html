@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Updating - Coffee House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "light-coffee": "#A57C52",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Hiệu ứng hiện hình mượt mà khi load trang */
+      .fade-in {
+        animation: fadeIn 1.5s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black antialiased overflow-hidden">
+    <div class="fixed inset-0 z-0">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-full object-cover opacity-60"
+      >
+        <source src="./video2.mp4" type="video/mp4" />
+        Trình duyệt của bạn không hỗ trợ video.
+      </video>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
+      ></div>
+    </div>
+
+    <main
+      class="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-6 fade-in"
+    >
+      <span
+        class="text-light-coffee uppercase tracking-[0.3em] text-sm mb-4 font-medium"
+      >
+        Coming Soon
+      </span>
+
+      <h1
+        class="text-white text-5xl md:text-7xl font-bold mb-6 tracking-tighter italic"
+      >
+        Hương vị đang <br class="md:hidden" />
+        được tinh luyện...
+      </h1>
+
+      <p
+        class="text-gray-300 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed font-light"
+      >
+        Chúng mình đang nâng cấp một vài tính năng mới để mang lại trải nghiệm
+        "chill" nhất cho bạn. Hẹn gặp lại bạn bên tách cà phê thơm nồng nhé!
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="index.html"
+          class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-300 bg-light-coffee rounded-full hover:bg-white hover:text-black overflow-hidden shadow-2xl"
+        >
+          <span class="relative z-10 uppercase tracking-widest text-xs"
+            >Quay lại trang chủ</span
+          >
+          <div
+            class="absolute inset-0 w-0 h-full transition-all duration-300 ease-out bg-white group-hover:w-full"
+          ></div>
+        </a>
+      </div>
+
+      <div
+        class="absolute bottom-10 text-gray-500 text-[10px] uppercase tracking-[0.5em]"
+      >
+        &copy; 2026 AwtichDev Studio
+      </div>
+    </main>
+  </body>
+</html>
