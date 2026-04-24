@@ -28,8 +28,8 @@
 }
 
 .ct-topmenu-expanded {
-  @apply absolute top-full left-0 w-full bg-white flex flex-col p-6 shadow-lg z-40 animate-slideDown !important;
-  display: flex; /* Ép nó hiện ra thay vì hidden */
+  @apply absolute top-full left-0 w-full bg-white flex flex-col p-6 shadow-lg z-40 animate-slideDown;
+  display: flex;
 }
 
 .ct-top-menu-item {
