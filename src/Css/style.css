@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
+
 @theme {
   --color-light-coffee: #c89f94;
   --font-sans: "Karla", sans-serif;
@@ -7,6 +8,7 @@
   --animate-fadeIn: fadeIn 0.5s ease-in-out;
   --background-image-ct-slider: url("/slider.jpg");
 }
+
 @keyframes slideDown {
   0% {
     transform: translateY(-100%);
@@ -15,44 +17,53 @@
     transform: translateY(0);
   }
 }
+
 @keyframes fadeIn {
-  from: {
+  from {
     opacity: 0;
   }
-  ,
-  to: {
+  to {
     opacity: 1;
   }
 }
-/* Custom top menu item styles */
+
 .ct-topmenu-expanded {
-  @apply absolute top-10 z-50 w-full text-center bg-white animate-slideDown;
+  @apply absolute top-full left-0 w-full bg-white flex flex-col p-6 shadow-lg z-40 animate-slideDown !important;
+  display: flex; /* Ép nó hiện ra thay vì hidden */
 }
+
 .ct-top-menu-item {
   @apply cursor-pointer py-1 hover:text-gray-800 relative after:lg:absolute after:bottom-0 after:lg:left-0 after:lg:bg-light-coffee after:lg:h-0.5 after:lg:w-full after:lg:scale-x-0 after:lg:origin-left after:lg:transition-transform after:lg:duration-300 hover:after:lg:scale-x-100;
 }
+
 .ct-top-menu-item-active {
   @apply text-gray-800;
 }
+
 .ct-icon {
   @apply w-5 h-5 inline-block;
 }
+
 .ct-badge-circle {
-  @apply text-xs text-center rounded-full  px-1.5;
+  @apply text-xs text-center rounded-full px-1.5;
 }
+
 .ct-subheadline {
   @apply flex justify-center items-center mb-24;
 }
+
 .ct-subheadline-deco-line {
-  @apply w-8 h-px bg-gray-20;
+  @apply w-8 h-px bg-gray-200;
 }
+
 .ct-subheadline-deco-label {
   @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-xs;
 }
-/*  thieu hover cho phan button */
+
 .ct-button {
-  @apply text-center uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold  hover:bg-white/75;
+  @apply text-center uppercase tracking-wider py-4 px-8 text-sm cursor-pointer font-semibold hover:bg-white/75;
 }
+
 .ct-button2 {
-  @apply uppercase tracking-wider py-4 px-8 text-sm  cursor-pointer font-semibold hover:opacity-80;
+  @apply uppercase tracking-wider py-4 px-8 text-sm cursor-pointer font-semibold hover:opacity-80;
 }
